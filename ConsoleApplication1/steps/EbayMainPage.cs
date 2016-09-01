@@ -63,10 +63,10 @@ namespace Ebay.steps
             Assert.That(WebDriver.Url.Contains("cart.payments.ebay.com"), message: WebDriver.Url);
         }
 
-        [Then(@"verify number of items in cart is (.*)")]
+        [Then(@"verify number of items in cart more then (.*)")]
         public void ThenVerifyNumberOfItemsInCartIs(int p0)
         {
-            Assert.True(p0 == EbaySite.cartPage.GetCartItemsCount());
+            Assert.True(p0 <= EbaySite.cartPage.GetCartItemsCount());
         }
 
         [Given(@"I go to main page")]
@@ -75,10 +75,11 @@ namespace Ebay.steps
             EbaySite.homePage.Open();
         }
 
-        [Given(@"insure '(.*)' view")]
+        [Given(@"insure I am on '(.*)' view")]
         public void GivenInsureView(string p0)
         {
-           // EbaySite.homePage.pageViewType.Ge("В виде галереи")
+            if (!EbaySite.homePage.pageViewType.GetText.Contains(p0))
+                EbaySite.homePage.pageViewType.Select(p0);
         }
     }
 }

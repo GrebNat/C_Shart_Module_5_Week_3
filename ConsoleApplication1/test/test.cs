@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -31,8 +32,9 @@ namespace Ebay.test
            
         //    EbaySite.homePage.buyNow.Click();
 
-            Console.WriteLine(EbaySite.homePage.pageViewType.Values);
-            if (!EbaySite.homePage.pageViewType.Values.Contains("В виде галереи"))
+            Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.WriteLine(EbaySite.homePage.pageViewType.GetText);
+            if (!EbaySite.homePage.pageViewType.GetText.Contains("В виде галереи"))
                 EbaySite.homePage.pageViewType.Select("В виде галереи");
 
 
