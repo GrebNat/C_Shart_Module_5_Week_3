@@ -30,20 +30,9 @@ namespace Ebay.PO.Pages
         [FindBy(XPath = "(//a[contains(@href,'BIN')])[1]")]
         public Link buyNow;
 
-        public IDropDown pageViewType = new Dropdown(By.Id("viewType"), By.XPath("*root*//*[@id='ViewTypeMenu']//span"));
-
-
-        public void SelectView(string viewName)
-        {
-            WebDriver.FindElement(By.Id("viewType")).Click();
-            WebDriver.FindElement(By.XPath($"//*[@id='ViewTypeMenu']//*[contains(text(), '{viewName}')]")).Click();
-        }
-
-        public void InsureGaleryView()
-        {
-
-        }
-
+        public IDropDown pageViewType = 
+            new Dropdown(By.Id("viewType"), By.XPath("*root*//*[@id='ViewTypeMenu']//span"));
+        
         public List<IWebElement> GetSearchResultList()
         {
             List<IWebElement> res =

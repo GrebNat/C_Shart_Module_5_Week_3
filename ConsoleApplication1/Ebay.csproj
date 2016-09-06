@@ -149,6 +149,7 @@
     <Compile Include="PO\Pages\ItemPreviewPage.cs" />
     <Compile Include="PO\Sections\SearchResultItem.cs" />
     <Compile Include="steps\BaseStep.cs" />
+    <Compile Include="steps\CartPage.cs" />
     <Compile Include="steps\EbayMainPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test\test.cs" />

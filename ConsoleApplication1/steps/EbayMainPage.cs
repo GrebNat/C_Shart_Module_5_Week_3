@@ -55,20 +55,7 @@ namespace Ebay.steps
         {
             EbaySite.homePage.pageViewType.Select(p0);
         }
-
-        [Then(@"verify I am on cart page")]
-        public void ThenVerifyIAmOnCartPage()
-        {
-            Assert.That("Ваша корзина".Equals(EbaySite.cartPage.pageTitle.GetText), message: EbaySite.cartPage.pageTitle.GetText);
-            Assert.That(WebDriver.Url.Contains("cart.payments.ebay.com"), message: WebDriver.Url);
-        }
-
-        [Then(@"verify number of items in cart more then (.*)")]
-        public void ThenVerifyNumberOfItemsInCartIs(int p0)
-        {
-            Assert.True(p0 <= EbaySite.cartPage.GetCartItemsCount());
-        }
-
+        
         [Given(@"I go to main page")]
         public void GivenIGoToMainPage()
         {
