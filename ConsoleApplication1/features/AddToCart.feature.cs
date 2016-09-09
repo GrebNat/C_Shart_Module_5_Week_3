@@ -64,6 +64,22 @@ namespace Ebay.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+ testRunner.Given("I go to main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+  testRunner.And("I search for \'book\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+  testRunner.And("click buy now link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+  testRunner.And("insure I am on \'В виде галереи\' view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+  testRunner.And("select 1 item in search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add to cart button navigate to cart page")]
         [NUnit.Framework.CategoryAttribute("mytag")]
@@ -71,21 +87,13 @@ namespace Ebay.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add to cart button navigate to cart page", new string[] {
                         "mytag"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
- testRunner.Given("I go to main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-  testRunner.And("I search for \'book\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
-  testRunner.And("click buy now link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-  testRunner.And("insure I am on \'В виде галереи\' view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-  testRunner.And("select 1 item in search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
- testRunner.When("I click add to cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 15
+ testRunner.When("I click add to cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
  testRunner.Then("verify I am on cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -98,21 +106,13 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Items Is added to the cart", new string[] {
                         "mytag"});
-#line 17
-this.ScenarioSetup(scenarioInfo);
-#line 18
- testRunner.Given("I go to main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
-  testRunner.And("I search for \'book\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 20
-  testRunner.And("click buy now link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
-  testRunner.And("insure I am on \'В виде галереи\' view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-  testRunner.And("select 1 item in search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
  testRunner.When("I click add to cart button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 21
  testRunner.Then("verify number of items in cart more then 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

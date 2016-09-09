@@ -3,23 +3,20 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
-@mytag
-Scenario: Add to cart button navigate to cart page
+Background: 
 	Given I go to main page
 		And I search for 'book'
 		And click buy now link
 		And insure I am on 'В виде галереи' view
 		And select 1 item in search result
+
+@mytag
+Scenario: Add to cart button navigate to cart page
 	When I click add to cart button
 	Then verify I am on cart page
 
 @mytag
 Scenario: Items Is added to the cart
-	Given I go to main page
-		And I search for 'book'
-		And click buy now link
-		And insure I am on 'В виде галереи' view
-		And select 1 item in search result
 	When I click add to cart button
 	Then verify number of items in cart more then 1
 
